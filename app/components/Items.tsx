@@ -6,7 +6,7 @@ const Items = () => {
   return (
     <div className="w-full h-fit md:h-screen flex flex-col lg:flex-row justify-center font-serif">
       <div className="md:w-1/3 w-full h-full flex flex-col text-left px-5 py-36 gap-2">
-        <p className="text-left leading-relaxed text-black text-lg font-bold">
+        <p className="text-left leading-relaxed text-black text-lg font-bold border-b border-green-600 w-fit">
           Welcome
         </p>
         <h1 className="font-bold text-black sm:text-5xl md:mb-8 text-6xl">
@@ -30,10 +30,10 @@ const Items = () => {
             className="h-full object-cover brightness-50"
           />
           <div className="absolute top-[40%] px-6 text-white gap-3">
-            <h1 className="font-bold text-white sm:text-5xl text-6xl mb-4">
+            <h1 className="font-bold text-white lg:text-5xl text-2xl mb-4">
               MEN
             </h1>
-            <p className="italic text-lg text-gray-300 mb-4">
+            <p className="italic lg:text-lg text-sm text-gray-300 mb-4">
               You can select items from a range of variety of male items
             </p>
             <button className="w-fit px-5 py-2 gap-2 items-center border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-green-600 text-white hover:bg-green-600">
@@ -51,10 +51,10 @@ const Items = () => {
             className="h-full object-cover brightness-50"
           />
           <div className="absolute top-[40%] px-6 text-white gap-3 ">
-            <h1 className="font-bold text-white sm:text-5xl text-6xl mb-4">
+            <h1 className="font-bold text-white lg:text-5xl text-2xl mb-4">
               WOMEN
             </h1>
-            <p className="italic text-lg text-gray-300 mb-4">
+            <p className="italic lg:text-lg text-sm text-gray-300 mb-4">
               You can select items from a range of variety of male items
             </p>
             <button className="w-fit px-5 py-2 gap-2 items-center border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-green-600 text-white hover:bg-green-600">

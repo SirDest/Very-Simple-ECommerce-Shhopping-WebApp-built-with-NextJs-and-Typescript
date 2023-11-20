@@ -13,10 +13,16 @@ const links = [
 const Header = () => {
   const pathname = usePathname();
   return (
-    <nav className="w-full h-fit flex justify-between items-center px-4 py-2 bg-none">
-      <div>
-        <a href="/" className="text-black font-bold md:text-[25px]">
-          ad<span className="text-green-600">EC</span>
+    <nav className="w-full h-fit flex justify-between items-center px-4 py-2 bg-none z-30">
+      <div className="group hover:scale-125 ease-in-out duration-300">
+        <a
+          href="/"
+          className="text-black group hover:text-green-600 ease-in-out duration-300 font-bold md:text-[25px]"
+        >
+          ad
+          <span className="text-green-600 group-hover:text-black ease-in-out duration-300">
+            EC
+          </span>
         </a>
       </div>
       <div className="lg:flex hidden ">
@@ -39,14 +45,14 @@ const Header = () => {
       <div className="flex items-center justify-center gap-4">
         <a
           href="/"
-          className="text-black flex flex-col gap-2 items-center md:px-5 md:py-3 px-3 py-2 border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-white hover:bg-green-600"
+          className="text-black flex flex-col gap-2 items-center md:px-5 md:py-3 px-3 py-2 border-2 border-green-600 outline-none ease-in-out duration-300  hover:bg-green-600"
         >
           <span className="m-auto">
             <FaShoppingCart />
           </span>
           <div className="flex gap-1">
             <span className="text-[10px] m-auto">Cart</span>
-            <span className="text-[13px] text-green-600">0</span>
+            <span className="text-[13px] text-red-700">0</span>
           </div>
         </a>
       </div>
