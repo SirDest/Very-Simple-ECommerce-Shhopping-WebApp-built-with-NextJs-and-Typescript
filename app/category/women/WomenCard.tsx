@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 const products = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch(
+    "https://fakestoreapi.com/products/category/women's%20clothing"
+  );
   const data: ProductType[] = await res.json();
   return data;
 };
 
-const ProductsCard = async () => {
+const WomenCard = async () => {
   const product = await products();
 
   return (
@@ -56,17 +58,8 @@ const ProductsCard = async () => {
           </div>
         )
       )}
-      {/* <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div> */}
     </div>
   );
 };
 
-export default ProductsCard;
+export default WomenCard;

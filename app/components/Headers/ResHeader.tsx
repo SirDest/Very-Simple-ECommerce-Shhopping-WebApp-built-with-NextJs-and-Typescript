@@ -3,17 +3,18 @@ import { usePathname } from "next/navigation";
 import React from "react";
 
 const links = [
-  { name: "Men", href: "/men" },
-  { name: "Women", href: "/Girls" },
-  { name: "Electronics", href: "/electronics" },
-  { name: "Jewelry", href: "/jewelry" },
+  { name: "Products", href: "/products" },
+  { name: "Men", href: "/category/men" },
+  { name: "Women", href: "/category/women" },
+  { name: "Electronics", href: "/category/electronics" },
+  { name: "Jewelry", href: "/category/jewelry" },
 ];
 
 const ResHeader = () => {
   const pathname = usePathname();
   return (
     <div className="z-30">
-      <ul className="lg:hidden flex justify-evenly py-2 w-full h-fit bg-none">
+      <ul className="lg:hidden text-[14px] flex justify-evenly py-2 w-full h-fit bg-none">
         {links.map(({ name, href }, i) => (
           <li key={i}>
             {pathname === href ? (

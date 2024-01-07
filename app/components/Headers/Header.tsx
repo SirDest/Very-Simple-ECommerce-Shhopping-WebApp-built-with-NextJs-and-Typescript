@@ -5,10 +5,10 @@ import { FaShoppingCart } from "react-icons/fa";
 
 const links = [
   { name: "Products", href: "/products" },
-  { name: "Men", href: "/men" },
-  { name: "Women", href: "/Girls" },
-  { name: "Electronics", href: "/electronics" },
-  { name: "Jewelry", href: "/jewelry" },
+  { name: "Men", href: "/category/men" },
+  { name: "Women", href: "/category/women" },
+  { name: "Electronics", href: "/category/electronics" },
+  { name: "Jewelry", href: "/category/jewelry" },
 ];
 
 const Header = () => {
