@@ -17,9 +17,12 @@ const Electronics = () => {
             When it commes to jewelries, we got you covered. You can get the
             latest and most valuable jewelries from our store.
           </p>
-          <button className="text-black w-fit px-5 py-2 gap-2 items-center border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-white hover:bg-green-600">
+          <a
+            href="/electonics"
+            className="text-black w-fit px-5 py-2 gap-2 items-center border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-white hover:bg-green-600"
+          >
             SHOP NOW
-          </button>
+          </a>
         </div>
         <div className="lg:w-2/3 w-full h-[50vh] lg:h-screen flex flex-row lg:flex-col relative gap-0 md:flex-row lg:mt-0">
           <div className="w-1/2 h-full lg:h-[80%] lg:w-fit lg:absolute bg-none lg:right-[300px] lg:top-10 lg:z-10 bg[#787878]">

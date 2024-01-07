@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { FaShoppingCart } from "react-icons/fa";
 
 const links = [
+  { name: "Products", href: "/products" },
   { name: "Men", href: "/men" },
   { name: "Women", href: "/Girls" },
   { name: "Electronics", href: "/electronics" },

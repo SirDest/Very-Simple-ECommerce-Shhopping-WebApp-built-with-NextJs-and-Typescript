@@ -4,7 +4,7 @@ import Image from "next/image";
 const products = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
   const data: ProductType[] = await res.json();
-  const productData = data.slice(0, 7);
+  const productData = data.slice(0, 9);
   return productData;
 };
 

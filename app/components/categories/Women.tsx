@@ -17,9 +17,12 @@ const Women = () => {
             Is it bags? Latest designers? Night dresses? You can get it in our
             store.
           </p>
-          <button className="text-black w-fit px-5 py-2 gap-2 items-center border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-white hover:bg-green-600">
+          <a
+            href="/women"
+            className="text-black w-fit px-5 py-2 gap-2 items-center border-2 border-green-600 outline-none ease-in-out duration-300 hover:border-white hover:bg-green-600"
+          >
             SHOP NOW
-          </button>
+          </a>
         </div>
         <div className="lg:w-2/3 w-full h-[50vh] lg:h-screen flex flex-row lg:flex-col relative gap-0 md:flex-row mt-10 lg:mt-0">
           <div className="lg:w-1/3 w-1/2 h-full lg:h-[80%] lg:absolute bg-none lg:right-14 lg:top-10 lg:z-10 bg[#e2e8eb]">
