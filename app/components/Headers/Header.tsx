@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { FaShoppingCart } from "react-icons/fa";
+import { CiShoppingCart } from "react-icons/ci";
 
 const links = [
   { name: "Products", href: "/products" },
@@ -14,7 +14,7 @@ const links = [
 const Header = () => {
   const pathname = usePathname();
   return (
-    <nav className="w-full h-fit flex justify-between items-center px-4 py-2 bg-none z-30">
+    <nav className="w-full h-fit flex justify-between items-center px-10 py-2 bg-none z-30">
       <div className="group hover:scale-125 ease-in-out duration-300">
         <a
           href="/"
@@ -27,7 +27,7 @@ const Header = () => {
         </a>
       </div>
       <div className="lg:flex hidden ">
-        <ul className="flex gap-16">
+        <ul className="flex gap-14">
           {links.map(({ name, href }, i) => (
             <li key={i}>
               {pathname === href ? (
@@ -46,15 +46,16 @@ const Header = () => {
       <div className="flex items-center justify-center gap-4">
         <a
           href="/"
-          className="text-black flex flex-col gap-2 items-center md:px-5 md:py-3 px-3 py-2 border-2 border-green-600 outline-none ease-in-out duration-300  hover:bg-green-600"
+          className="text-black text-[15px] flex flex-row items-center outline-none ease-in-out duration-300  hover:scale-110"
         >
-          <span className="m-auto">
-            <FaShoppingCart />
+          <span className="m-auto text-2xl">
+            <CiShoppingCart />
           </span>
-          <div className="flex gap-1">
+          <p className="m-auto text-center text-black">0</p>
+          {/* <div className="flex gap-1">
             <span className="text-[10px] m-auto">Cart</span>
-            <span className="text-[13px] text-red-700">0</span>
-          </div>
+            <span className="text-[15px] text-red-700">0</span>
+          </div> */}
         </a>
       </div>
     </nav>
