@@ -1,7 +1,7 @@
 import { ProductType } from "@/typings";
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import { FaCartPlus } from "react-icons/fa";
+import { MdAddShoppingCart } from "react-icons/md";
 
 const products = async () => {
   const res = await fetch("https://fakestoreapi.com/products");
@@ -36,14 +36,11 @@ const ProductsCard = async () => {
                 backgroundPosition: "center",
               }}
             >
-              <div className="absolute text-white p-2 hover:scale-110 ease-in-out duration-300 rounded-[50%] bg-gray-600 top-5 right-5 text-[20px] z-10">
-                <FaCartPlus />
-              </div>
+              <button className="absolute text-black p-2 hover:scale-110 ease-in-out duration-300 rounded-[50%] bg-white top-5 right-5 text-[25px] z-10">
+                <MdAddShoppingCart />
+              </button>
             </div>
-            <div
-              // style={{ whiteSpace: "normal", overflow: "visible" }}
-              className="text-[13px] px-2 text-black truncate mt-2 group-hover:whitespace-normal group-hover:overflow-visible"
-            >
+            <div className="text-[13px] px-2 text-black truncate mt-2 group-hover:whitespace-normal group-hover:overflow-visible">
               {title}
             </div>
             <div className="flex px-2 justify-between text-[12px]">

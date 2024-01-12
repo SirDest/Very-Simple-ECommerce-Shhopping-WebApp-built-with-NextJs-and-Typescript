@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Items from "./components/Items";
 import Products from "./components/Scroll/Products";
@@ -17,6 +18,7 @@ export default function Home() {
         <Women />
         <Electronics />
         <JewelryScroll />
+        <Footer />
       </div>
     </main>
   );
