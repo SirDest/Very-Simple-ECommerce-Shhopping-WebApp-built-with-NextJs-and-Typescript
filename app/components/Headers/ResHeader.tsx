@@ -13,7 +13,7 @@ const links = [
 const ResHeader = () => {
   const pathname = usePathname();
   return (
-    <div className="z-30">
+    <div className="z-10">
       <ul className="lg:hidden text-[14px] flex justify-evenly py-2 w-full h-fit bg-none">
         {links.map(({ name, href }, i) => (
           <li key={i}>

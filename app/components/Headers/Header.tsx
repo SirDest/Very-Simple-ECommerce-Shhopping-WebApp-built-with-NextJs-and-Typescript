@@ -1,7 +1,7 @@
 "use client";
 
+import Cart from "@/app/cart/page";
 import { usePathname } from "next/navigation";
-import { CiShoppingCart } from "react-icons/ci";
 
 const links = [
   { name: "Products", href: "/products" },
@@ -43,21 +43,7 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <div className="flex items-center justify-center gap-4">
-        <a
-          href="/"
-          className="text-black text-[15px] flex flex-row items-center outline-none ease-in-out duration-300  hover:scale-110"
-        >
-          <span className="m-auto text-2xl">
-            <CiShoppingCart />
-          </span>
-          <p className="m-auto text-center text-black">0</p>
-          {/* <div className="flex gap-1">
-            <span className="text-[10px] m-auto">Cart</span>
-            <span className="text-[15px] text-red-700">0</span>
-          </div> */}
-        </a>
-      </div>
+      <Cart />
     </nav>
   );
 };
