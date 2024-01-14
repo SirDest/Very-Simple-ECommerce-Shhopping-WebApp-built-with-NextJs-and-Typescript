@@ -1,16 +1,26 @@
+"use client";
 import { ProductType } from "@/typings";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { MdAddShoppingCart } from "react-icons/md";
 
-const products = async () => {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const data: ProductType[] = await res.json();
-  return data;
-};
+const ProductsCard = () => {
+  const [product, setProduct] = useState([]);
+  // const [cart, setCart] = useState<ProductType[]>([]);
 
-const ProductsCard = async () => {
-  const product = await products();
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("https://fakestoreapi.com/products");
+        const data = await res.json();
+        setProduct(data);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <div className="h-fit w-full grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 px-4 md:px-6 lg:px-16 gap-5">
@@ -58,15 +68,6 @@ const ProductsCard = async () => {
           </div>
         )
       )}
-      {/* <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div>
-      <div className="bg-blue-500 h-[100px]"></div>
-      <div className="bg-red-500 h-[100px]"></div> */}
     </div>
   );
 };

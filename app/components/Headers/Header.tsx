@@ -1,6 +1,6 @@
 "use client";
 
-import Cart from "@/app/cart/page";
+import { CiShoppingCart } from "react-icons/ci";
 import { usePathname } from "next/navigation";
 
 const links = [
@@ -43,7 +43,13 @@ const Header = () => {
           ))}
         </ul>
       </div>
-      <Cart />
+      <a
+        href="/cart"
+        className="text-black text-2xl flex flex-row items-center outline-none ease-in-out duration-300  hover:scale-110"
+      >
+        <CiShoppingCart />
+        <span className="m-auto text-center text-[15px] text-black">0</span>
+      </a>
     </nav>
   );
 };

@@ -1,6 +1,7 @@
 import { ProductType } from "@/typings";
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { MdAddShoppingCart } from "react-icons/md";
 
 const products = async () => {
   const res = await fetch(
@@ -27,7 +28,7 @@ const ElectronicsCard = async () => {
         }) => (
           <div
             key={id}
-            className="h-[300px] flex flex-col rounded-lg bg-white group hover:scale-110 overflow-hidden hover:bg-gray-200 ease-in-out duration-500 cursor-pointer p-2"
+            className="h-[300px] flex relative flex-col rounded-lg bg-white group hover:scale-110 overflow-hidden hover:bg-gray-200 ease-in-out duration-500 cursor-pointer p-2"
           >
             <div
               className="h-[200px] rounded-xl"
@@ -36,7 +37,11 @@ const ElectronicsCard = async () => {
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
-            ></div>
+            >
+              <button className="absolute text-black p-2 hover:scale-110 ease-in-out duration-300 rounded-[50%] bg-white top-5 right-5 text-[25px] z-10">
+                <MdAddShoppingCart />
+              </button>
+            </div>
             <div
               // style={{ whiteSpace: "normal", overflow: "visible" }}
               className="text-[13px] text-black truncate mt-2 group-hover:whitespace-normal group-hover:overflow-visible"
